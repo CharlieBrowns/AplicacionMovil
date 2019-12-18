@@ -1,0 +1,7 @@
+{
+    "mongoDB" : {
+        "uri" : "mongodb+srv://RomarioDiaz:<15121017>@cluster0-hlrbe.mongodb.net/Aplication?retryWrites=true&w=majority",
+        "user" : "RomarioDiaz",
+        "pass" : "15121017"
+    }
+}

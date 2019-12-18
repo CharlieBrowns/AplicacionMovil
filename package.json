@@ -1,0 +1,24 @@
+{
+  "name": "aplicacionmovil",
+  "version": "1.0.0",
+  "description": "Aplicacion para los muchachos",
+  "main": "index.js",
+  "scripts": {
+    "test": "start",
+    "start" : "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[A\u001b[Bgithub.com/CharlieBrowns/AplicacionMovil.git"
+  },
+  "author": "Romario Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
