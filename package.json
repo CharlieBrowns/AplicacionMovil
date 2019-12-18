@@ -4,8 +4,8 @@
   "description": "Aplicacion para los muchachos",
   "main": "index.js",
   "scripts": {
-    "test": "start"
-    // "start" : "nodemon ./index.js"
+    "test": "start",
+    "start" : "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.8.1"
+    "mongoose": "^5.8.1",
+    "nodemon": "^2.0.2"
   }
-  // "devDependencies": {
-  //   "nodemon": "^2.0.2"
-  // }
 }
