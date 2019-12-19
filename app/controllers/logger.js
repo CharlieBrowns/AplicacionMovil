@@ -4,17 +4,21 @@ const User = require('../models/user')
 
 async function signUp(req, res) {
     console.log("los datos que estan llegando del registro", req.body)
+    try{
+        const newUser = new User({
+            nombres : req.body.nombres,
+            apellidos : req.body.apellidos,
+            DNI : req.body.DNI,
+            password : req.body.password                                                                                                                                                        
+        })
 
-    const newUser = new User({
-        nombres : req.body.nombres,
-        apellidos : req.body.apellidos,
-        DNI : req.body.DNI,
-        password : req.body.password                                                                                                                                                        
-    })
+        var data = await newUser.save()
 
-    var data = await newUser.save()
+        res.send({message : data})        
+    }catch(error) {
+        console.log("ha ocurrido un error")
+    }
 
-    res.send({message : data})
 }
 
 async function signIn(req, res) {
