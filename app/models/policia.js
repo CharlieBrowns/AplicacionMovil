@@ -1,12 +1,13 @@
 'use strict'
 
 const Mongoose = require('mongoose')
+const Schema = Mongoose.Schema
 
-const Policia = new Mongoose.Schema({
-    DNI_policia : {type : Number, required : true},
+const Policia = new Schema({
+    Password : {type : String , required : true},
     N_de_CIP : {type : String , required : true},
     Cargo : {type : String , required : true},
-    Worker : { type: Schema.ObjectId, ref: "Trabajador" }
+    persona : { type: Schema.ObjectId, ref: "Persona" }
 })
 
 module.exports = Mongoose.model('Policia' , Policia)
