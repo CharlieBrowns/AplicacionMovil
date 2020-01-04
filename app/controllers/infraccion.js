@@ -2,7 +2,7 @@
 
 const Infraccion = require('../models/infraccion')
 
-function newInfraccion (req, res) {
+async function newInfraccion (req, res) {
     const newInfraccion  = new Infraccion({
         Dni_conductor : req.body.Dni,
         Tipo_Documento : req.body.Apellido_Paterno,
@@ -54,7 +54,7 @@ async function getInfracciones (req, res) {
     res.send(Infraciones_Registradas)
 }
 
-function getInfraccion (req, res) {
+async function getInfraccion (req, res) {
     var persona = await Persona.find({
         id_ : req.body.id
     })
