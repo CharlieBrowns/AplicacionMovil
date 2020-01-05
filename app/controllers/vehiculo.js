@@ -11,6 +11,7 @@ async function getIncauto (req, res) {
 async function newIncauto (req, res) {
     console.log("el nuevo vehiculo incautato" , req.body)
     const newVehiculo  = new Vehiculo({
+        Tipo_Vehiculo : req.body.Tipo_Vehiculo,
         Dni_Propietario : req.body.Dni_Propietario,
         Dni_Infractor : req.body.Dni_Infractor,
         Fecha_Ingreso : req.body.Fecha_Ingreso,
