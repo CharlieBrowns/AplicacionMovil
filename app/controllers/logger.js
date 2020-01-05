@@ -94,9 +94,9 @@ async function signIn(req, res) {
                 {Password : req.body.Password},
             )
             if (await verify(infractor, req.body.Nombres) == true) {
-                res.send({message : 'logueado correctamente'})
+                res.send(true)
             }else{
-                res.send({message : 'datos incorrectos'})
+                res.send(false)
             }
             break;
         case 'secretaria':
@@ -106,9 +106,9 @@ async function signIn(req, res) {
 
             console.log("las secretaria : " , secretaria)
             if (await verify(secretaria, req.body.Nombres) == true) {
-                res.send({message : 'logueado correctamente'})
+                res.send(true)
             }else{
-                res.send({message : 'datos incorrectos'})
+                res.send(false)
             }
   
             break;
@@ -117,9 +117,9 @@ async function signIn(req, res) {
                 {Password : req.body.Password},
             )
             if (await verify(policia, req.body.Nombres) == true) {
-                res.send({message : 'logueado correctamente'})
+                res.send(true)
             }else{
-                res.send({message : 'datos incorrectos'})
+                res.send(false)
             }
             break;
         default:
