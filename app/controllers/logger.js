@@ -15,7 +15,7 @@ async function signUp(req, res) {
     )
 
     if (persona.length != 0) {
-        res.send({message : 'esta persona ya esta registrada'})
+        res.send(false)
     }else {
     try {
         const newPersona  = new Persona({
