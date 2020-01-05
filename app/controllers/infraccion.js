@@ -3,6 +3,8 @@
 const Infraccion = require('../models/infraccion')
 
 async function newInfraccion (req, res) {
+
+    console.log("la infraccion  : " , req.body)
     const newInfraccion  = new Infraccion({
         Dni_conductor : req.body.Dni,
         Tipo_Documento : req.body.Apellido_Paterno,

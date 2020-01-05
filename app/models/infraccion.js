@@ -6,7 +6,7 @@ const Infraccion = new Mongoose.Schema({
 
     //datos del  conductor
 
-    Dni_conductor : { type : Number , required : true},
+    Dni_conductor : { type : String , required : true},
     Tipo_Documento : { type : String , required : true},
     Apellido_Paterno : { type : String , required : true},
     Apellido_Materno : { type : String , required : true},
@@ -17,8 +17,8 @@ const Infraccion = new Mongoose.Schema({
     Distrito : { type : String , required : true},
 
     // Datos del vehiculo
-    N_Placa : {type : Number, required : true},
-    N_TarjetaPropiedad : {type : Number, required : true},
+    N_Placa : {type : String, required : true},
+    N_TarjetaPropiedad : {type : String, required : true},
     ModalidadServicio : {type : String, required : true},
     Tipo_Servicio : {type : String, required : true},
 
