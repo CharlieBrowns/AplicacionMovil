@@ -48,7 +48,7 @@ async function signUp(req, res) {
                 const newPolicia = new Policia({
                     Password : req.body.Password,
                     N_de_CIP : req.body.N_de_CIP,
-                    Cargo : req.body.cargo,
+                    Cargo : req.body.Cargo,
                     persona : newPersona._id
                 })
 
