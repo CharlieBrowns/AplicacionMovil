@@ -7,7 +7,9 @@ const app = require('express')(),
       
       logguer = require('./routers/logger'),
       vehiculo = require('./routers/vehiculo'),
-      infraccion = require('./routers/infraccion')
+      infraccion = require('./routers/infraccion'),
+      secretaria = require('./routers/secretaria')
+
 
 app
     .set('port',port)
@@ -17,5 +19,6 @@ app
     .use('/', logguer)
     .use('/', vehiculo)
     .use('/', infraccion)
+    .use('/', secretaria)
 
 module.exports = app

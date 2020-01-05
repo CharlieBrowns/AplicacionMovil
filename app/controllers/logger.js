@@ -9,6 +9,7 @@ const Policia = require('../models/policia')
 async function signUp(req, res) {
     
     // verificamos si existe el usuario
+    console.log("los datos : " , req.body)
     var persona = await Persona.find(
         {Nombres : req.body.Nombres},
     )
