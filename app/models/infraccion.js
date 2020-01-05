@@ -6,7 +6,8 @@ const Infraccion = new Mongoose.Schema({
 
     //datos del  conductor
 
-    Dni_conductor : { type : String , required : false},
+    // Dni_conductor : { type : String , required : false},
+    Dni_Conductor : { type : String , required : true },
     Tipo_Documento : { type : String , required : true},
     Apellido_Paterno : { type : String , required : true},
     Apellido_Materno : { type : String , required : true},

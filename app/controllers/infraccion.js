@@ -6,7 +6,7 @@ async function newInfraccion (req, res) {
 
     console.log("la infraccion  : " , req.body)
     const newInfraccion  = new Infraccion({
-        Dni_conductor : req.body.Dni,
+        Dni_conductor : req.body.Dni_Conductor,
         Tipo_Documento : req.body.Apellido_Paterno,
         Apellido_Paterno : req.body.Apellido_Materno,
         Apellido_Materno : req.body.Apellido_Materno,
