@@ -112,10 +112,10 @@ async function signIn(req, res) {
             )
 
             console.log("las secretaria : " , secretaria)
-            if (await verify(secretaria, req.body.Nombres) == true) {
-                res.send(true)
-            }else{
+            if (await verify(secretaria, req.body.Nombres) == false) {
                 res.send(false)
+            }else{
+                res.send(true)
             }
   
             break;
@@ -123,10 +123,10 @@ async function signIn(req, res) {
             var policia = await Policia.find(
                 {Password : req.body.Password},
             )
-            if (await verify(policia, req.body.Nombres) == true) {
-                res.send(true)
-            }else{
+            if (await verify(policia, req.body.Nombres) == false) {
                 res.send(false)
+            }else{
+                res.send(true)
             }
             break;
         default:
