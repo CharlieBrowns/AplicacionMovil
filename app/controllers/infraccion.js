@@ -51,6 +51,9 @@ async function newInfraccion (req, res) {
 }
 
 async function getInfracciones (req, res) {
+
+    console.log("las infracciones ");
+
     var Infraciones_Registradas = await Infraccion.find()
 
     res.send(Infraciones_Registradas)
