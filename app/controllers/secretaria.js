@@ -4,6 +4,8 @@ const Pay = require('../models/pay')
 
 async function newPay (req, res) {
     console.log("new Pay" , req.body)
+
+    
     const newPay = new Pay({
         Dni : req.body.Dni,
         N_papeleta : req.body.N_papeleta,

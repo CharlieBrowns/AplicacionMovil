@@ -8,6 +8,7 @@ const Pay = new Mongoose.Schema({
     Estado : {type : String, required : true},
 })
 
+
 module.exports = Mongoose.model('Pay', Pay)
 
 

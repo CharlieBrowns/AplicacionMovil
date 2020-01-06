@@ -9,6 +9,7 @@ const app = require('express')(),
       vehiculo = require('./routers/vehiculo'),
       infraccion = require('./routers/infraccion'),
       secretaria = require('./routers/secretaria')
+      
 
 
 app

@@ -5,8 +5,8 @@ const secretariaCtrl = require('../controllers/secretaria')
 
 secret
 
-    .get('/register', secretariaCtrl.newPay)
+    .get('/getPays', secretariaCtrl.getPays)
 
-    .post('/login', secretariaCtrl.getPays)
+    .post('/newPays', secretariaCtrl.newPays)
 
 module.exports = secret
