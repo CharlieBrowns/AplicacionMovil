@@ -10,9 +10,9 @@ async function newPay (req, res) {
             N_papeleta : req.body.N_papeleta,
             Estado : req.body.Estado
         })
-    
-        var pay = await newPay.save()
         data = data + 1;
+        var pay = await newPay.save()
+        
         res.send({message: 'exito'})
         
     }else {
