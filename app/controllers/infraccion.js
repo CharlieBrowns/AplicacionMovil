@@ -68,10 +68,9 @@ async function getInfracciones (req, res) {
 }
 
 async function getInfraccion (req, res) {
-    var persona = await Persona.find({
-        id_ : req.body.id
+    var persona = await Infraccion.find({
+        Dni_Conductor : req.body.Dni_Conductor
     })
-
     res.send({dataserver : persona})
 }
 
@@ -81,7 +80,13 @@ async function userInfraccion (req, res) {
     var persona = await Infraccion.find()
 
     console.log("los datos que estamos recuperando", persona)
-    res.send({dataserverR : persona})
+
+    res.send({dataserver : persona})
+    // if (persona.length == 0) {
+    //     res.send(false)
+    // }else{
+    //     res.send(false)
+    // }
 }
 
 module.exports = {
