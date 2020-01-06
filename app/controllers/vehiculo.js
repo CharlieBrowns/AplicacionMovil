@@ -2,14 +2,17 @@
 
 const Vehiculo = require('../models/vehiculo') 
 
-async function getIncauto (req, res) {
+async function getIncautos (req, res) {
     var Vehiculos_Incautados = await Vehiculo.find()
 
-    res.send(Vehiculos_Incautados)
+    res.send({dataserverV : Vehiculos_Incautados})
 }
+
+var data = 0;
 
 async function newIncauto (req, res) {
     console.log("el nuevo vehiculo incautato" , req.body)
+    if(data == 0){
     const newVehiculo  = new Vehiculo({
         Tipo_Vehiculo : req.body.Tipo_Vehiculo,
         Dni_Propietario : req.body.Dni_Propietario,
@@ -22,9 +25,13 @@ async function newIncauto (req, res) {
         Nro_Placa : req.body.Nro_Placa
     })
     var vehiculo = await newVehiculo.save()
-
+    data = data + 1;
     console.log("lo que ingresamos : " , vehiculo)
     res.send(vehiculo)
+    }else{
+        console.log("ya no se puede" )
+        data = 0;
+    }
 }
 
 module.exports = {

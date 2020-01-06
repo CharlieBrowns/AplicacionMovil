@@ -5,7 +5,7 @@ const vehiculoCtrl = require('../controllers/vehiculo')
 
 movil
 
-    .get('/getIncauto', vehiculoCtrl.getIncauto)
+    .get('/getIncautos', vehiculoCtrl.getIncautos)
 
     .post('/newIncauto', vehiculoCtrl.newIncauto)
 
