@@ -48,9 +48,9 @@ async function newInfraccion (req, res) {
             Observaciones               : req.body.Observaciones,
             Costo                       : req.body.Costo
         })
-
-        var infraccion = await newInfraccion.save()
         data = data + 1;
+        var infraccion = await newInfraccion.save()
+        //data = data + 1;
         res.send({message: 'datos ingresados correctamente '})
     }else {
         console.log("ya no se puede" )
