@@ -80,8 +80,8 @@ async function userInfraccion (req, res) {
         Dni_Conductor : req.body.Dni
     })
 
-    console.log("los datos que estamos recuperando")
-    res.send({dataserver : persona})
+    console.log("los datos que estamos recuperando", persona)
+    res.send({dataserverR : persona})
 }
 
 module.exports = {
