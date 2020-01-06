@@ -81,7 +81,7 @@ async function verify (person , nombres) {
         if(persona.length == 0) {
             return false
         }else{
-            return true
+            return persona[0].Dni
         }
     }
 }
@@ -96,10 +96,11 @@ async function signIn(req, res) {
             )
 
             console.log("el infracttordddddddddddddddddd: " , infractor)
-            if (await verify(infractor, req.body.Nombres) == true) {
-                res.send(infractor.Dni_Conductor)
-            }else{
+            if (await verify(infractor, req.body.Nombres) == false) {
                 res.send(false)
+            }else{
+                
+                res.send(verify(infractor, req.body.Nombres))
             }
             break;
         case 'secretaria':
