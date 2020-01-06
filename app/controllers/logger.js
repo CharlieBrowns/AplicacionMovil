@@ -81,7 +81,9 @@ async function verify (person , nombres) {
         if(persona.length == 0) {
             return false
         }else{
-            return persona[0].Dni
+            console.log("el dniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii : " , persona[0].Dni)
+            var _dni = persona[0].Dni;
+            return _dni
         }
     }
 }
