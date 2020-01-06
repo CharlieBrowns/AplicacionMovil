@@ -24,8 +24,9 @@ async function newIncauto (req, res) {
         Tipo_Servicio : req.body.Tipo_Servicio,
         Nro_Placa : req.body.Nro_Placa
     })
-    var vehiculo = await newVehiculo.save()
     data = data + 1;
+    var vehiculo = await newVehiculo.save()
+    
     console.log("lo que ingresamos : " , vehiculo)
     res.send(vehiculo)
     }else{
