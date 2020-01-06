@@ -11,7 +11,7 @@ infraccion
 
     .get('/getInfracciones', infraccionCtrl.getInfracciones)
 
-    .get('/getInfraccion' , infraccionCtrl.getInfraccion)
+    .post('/getInfraccion' , infraccionCtrl.getInfraccion)
 
 
 module.exports = infraccion

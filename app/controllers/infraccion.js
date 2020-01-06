@@ -68,9 +68,12 @@ async function getInfracciones (req, res) {
 }
 
 async function getInfraccion (req, res) {
+    console.log("la infraccion que quiero : " , req.body)
     var persona = await Infraccion.find({
         Dni_Conductor : req.body.Dni_Conductor
     })
+
+    console.log("la persona que asjaskjdhaslkkajslkajslkajslkjaslkdjaslkdjaslkdjlaskdjlkasjaslk" , persona)
     res.send({dataserver : persona})
 }
 
