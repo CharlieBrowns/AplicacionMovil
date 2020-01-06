@@ -95,7 +95,7 @@ async function signIn(req, res) {
                 {Password : req.body.Password},
             )
 
-            console.log("el infracttordddddddddddddddddd: " , infractor)
+            console.log("el infracttorddddddddddddddddddas: " , infractor)
             if (await verify(infractor, req.body.Nombres) == false) {
                 res.send(false)
             }else{
