@@ -45,7 +45,8 @@ async function newInfraccion (req, res) {
             Apellido_Materno_Autoridad  : req.body.Apellido_Materno_Autoridad,
             Nombres_Autoridad           : req.body.Nombres_Autoridad,
             Nro_CP                      : req.body.Nro_CP,
-            Observaciones               : req.body.Observaciones
+            Observaciones               : req.body.Observaciones,
+            Costo                       : req.body.Costo
         })
 
         var infraccion = await newInfraccion.save()

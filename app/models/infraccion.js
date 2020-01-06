@@ -51,6 +51,7 @@ const Infraccion = new Mongoose.Schema({
     Nombres_Autoridad : {type : String, required : true},
     Nro_CP : {type : String, required : true},
     Observaciones : {type : String, required : true},
+    Costo : {type : String, required : true}
 
 })
 
