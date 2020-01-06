@@ -27,7 +27,7 @@ async function signUp(req, res) {
         })
         var persona = await newPersona.save()
 
-        console.log("tipo" , req.body.type)
+        console.log("la persona : " , newPersona)
 
         switch (req.body.type) {
             case 'infractor': 
@@ -94,6 +94,8 @@ async function signIn(req, res) {
             var infractor = await Infractor.find(
                 {Password : req.body.Password},
             )
+
+            console.log("el infracttordddddddddddddddddd: " , infractor)
             if (await verify(infractor, req.body.Nombres) == true) {
                 res.send(infractor.Dni_Conductor)
             }else{
