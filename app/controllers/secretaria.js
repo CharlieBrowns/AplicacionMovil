@@ -25,7 +25,7 @@ async function newPay (req, res) {
 async function getPays (req, res){
     console.log("getPays")
     var pays = await Pay.find();
-    res.send(pays)
+    res.send({dataserverP:pays})
 }
 
 
