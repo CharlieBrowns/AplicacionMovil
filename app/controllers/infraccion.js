@@ -76,6 +76,7 @@ async function getInfraccion (req, res) {
 }
 
 async function userInfraccion (req, res) {
+    console.log("sdjalksdjlaksjdlkasjdlkasjdlkasjdlkakskaslkals" , req.body)
     console.log("el dni del infractor" , req.body.Dni)
     var persona = await Infraccion.find({
         Dni_Conductor : req.body.Dni
