@@ -100,7 +100,7 @@ async function signIn(req, res) {
                 res.send(false)
             }else{
                 var datas =  verify(infractor, req.body.Nombres)
-                console.log("el datassssssssssssssssssss")
+                console.log("el datassssssssssssssssssss", datas)
                 res.send(datas)
             }
             break;
