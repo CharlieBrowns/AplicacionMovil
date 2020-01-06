@@ -101,7 +101,7 @@ async function signIn(req, res) {
             if (await verify(infractor, req.body.Nombres) == false) {
                 res.send(false)
             }else{
-                var datas =  verify(infractor, req.body.Nombres)
+                var datas =  await verify(infractor, req.body.Nombres)
                 console.log("el datassssssssssssssssssss", datas)
                 res.send(datas)
             }
