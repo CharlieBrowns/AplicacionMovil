@@ -4,9 +4,8 @@ const secret = require('express').Router()
 const secretariaCtrl = require('../controllers/secretaria')
 
 secret
-
     .get('/getPays', secretariaCtrl.getPays)
 
-    .post('/newPays', secretariaCtrl.newPays)
+    .post('/newPay', secretariaCtrl.newPay)
 
 module.exports = secret
