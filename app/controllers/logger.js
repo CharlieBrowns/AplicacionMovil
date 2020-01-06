@@ -31,6 +31,7 @@ async function signUp(req, res) {
 
         switch (req.body.type) {
             case 'infractor': 
+            console.log("entraa aqui ")
                 const newInfractor = new Infractor({
                     Password : req.body.Password,
                     persona : newPersona._id
