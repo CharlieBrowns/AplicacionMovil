@@ -94,7 +94,7 @@ async function signIn(req, res) {
                 {Password : req.body.Password},
             )
             if (await verify(infractor, req.body.Nombres) == true) {
-                res.send(true)
+                res.send(infractor.Dni_Conductor)
             }else{
                 res.send(false)
             }

@@ -7,6 +7,8 @@ infraccion
 
     .post('/newInfraccion', infraccionCtrl.newInfraccion)
 
+    .post('/userInfraccion' , infraccionCtrl.userInfraccion)
+
     .get('/getInfracciones', infraccionCtrl.getInfracciones)
 
     .get('/getInfraccion' , infraccionCtrl.getInfraccion)
