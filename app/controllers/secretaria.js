@@ -13,6 +13,7 @@ async function newPay (req, res) {
     })
 
     var pay = await newPay.save()
+    res.send({message: 'exito'})
 }
 
 async function getPays (req, res){
