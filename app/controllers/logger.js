@@ -99,8 +99,9 @@ async function signIn(req, res) {
             if (await verify(infractor, req.body.Nombres) == false) {
                 res.send(false)
             }else{
-                
-                res.send(verify(infractor, req.body.Nombres))
+                var datas =  verify(infractor, req.body.Nombres)
+                console.log("el datassssssssssssssssssss")
+                res.send(datas)
             }
             break;
         case 'secretaria':
