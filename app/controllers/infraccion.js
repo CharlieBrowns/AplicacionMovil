@@ -56,7 +56,7 @@ async function getInfracciones (req, res) {
 
     var Infraciones_Registradas = await Infraccion.find()
 
-    res.send(Infraciones_Registradas)
+    res.send({dataserver : Infraciones_Registradas })
 }
 
 async function getInfraccion (req, res) {
