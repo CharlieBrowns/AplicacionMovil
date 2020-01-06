@@ -64,7 +64,7 @@ async function getInfraccion (req, res) {
         id_ : req.body.id
     })
 
-    res.send(persona)
+    res.send({dataserver : persona})
 }
 
 module.exports = {
