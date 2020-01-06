@@ -35,6 +35,6 @@ async function newIncauto (req, res) {
 }
 
 module.exports = {
-    getIncauto,
+    getIncautos,
     newIncauto
 }
